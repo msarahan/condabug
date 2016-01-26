@@ -1,0 +1,23 @@
+package:
+  name: hw
+  version: 1.0.0
+
+source:
+  path: ..
+
+build:
+  number: 0
+  features:
+    - vc14     # [py35]
+    - vc10     # [py34]
+    - vc9      # [py27]
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    
+test:
+  imports:
+    - hw
