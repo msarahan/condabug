@@ -1,6 +1,6 @@
 # Steps to reproduce
 
-Using Miniconda based on Python 3.5, the following commands will succeed:
+The following commands will succeed:
 
 ```batch
 > conda build .\conda_recipe --py 35
