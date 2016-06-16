@@ -19,8 +19,6 @@ These commands will fail:
 
 # conda info
 
-Python 2 and 3 are mixed up:
-
 ```
 > conda info
 Using Anaconda Cloud api site https://api.anaconda.org
@@ -44,6 +42,8 @@ Current conda install:
 ```
 
 # output of failing command
+
+Python 2 and 3 are mixed up:
 
 ```
 korij@KORIJN-LAPTOP C:\Users\korij\dev\condabug
