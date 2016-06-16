@@ -6,17 +6,16 @@ source:
   path: ..
 
 build:
+  noarch_python: True
   number: 0
-  features:
-    - vc14     # [win and py35]
-    - vc10     # [win and py34]
-    - vc9      # [win and py27]
 
 requirements:
   build:
     - python
+    - pyqt
   run:
     - python
+    - pyqt
     
 test:
   imports:

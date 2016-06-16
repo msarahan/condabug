@@ -1,21 +1,42 @@
-Steps to reproduce:
+# Steps to reproduce
+
+Using Miniconda based on Python 3.5, the following commands will succeed:
 
 ```batch
-> conda build .\conda_recipe --py 35 --no-anaconda-upload
-> conda build .\conda_recipe --py 34 --no-anaconda-upload
-> conda build .\conda_recipe --py 27 --no-anaconda-upload
-> conda create -n condabug --alt-hint --use-local python hw
+> conda build .\conda_recipe --py 35
+> conda build .\conda_recipe
+> set CONDA_PY=35
+> conda build .\conda_recipe
+```
+
+These commands will fail:
+
+```batch
+> conda build .\conda_recipe --py 27
+> set CONDA_PY=27
+> conda build .\conda_recipe
+```
+
+# conda info
+
+```
+> conda info
 Using Anaconda Cloud api site https://api.anaconda.org
-Fetching package metadata: ........
-Solving package specifications: ...
-Error: Unsatisfiable package specifications.
-Generating minimal hint:
-[      COMPLETE      ]|##################################################| 100%
+Current conda install:
 
-The following set of clauses is unsatisfiable:
-
-not hw-1.0.0-py35_vc14_0
-not hw-1.0.0-py27_vc9_0
-not hw-1.0.0-py34_vc10_0
-hw-1.0.0-py27_vc9_0 or hw-1.0.0-py35_vc14_0 or hw-1.0.0-py34_vc10_0
+             platform : win-64
+        conda version : 4.1.0
+  conda-build version : 1.21.0
+       python version : 3.5.1.final.0
+     requests version : 2.9.1
+     root environment : C:\Users\korij\Miniconda3  (writable)
+  default environment : C:\Users\korij\Miniconda3
+     envs directories : C:\Users\korij\Miniconda3\envs
+        package cache : C:\Users\korij\Miniconda3\pkgs
+         channel URLs : https://repo.continuum.io/pkgs/free/win-64/
+                        https://repo.continuum.io/pkgs/free/noarch/
+                        https://repo.continuum.io/pkgs/pro/win-64/
+                        https://repo.continuum.io/pkgs/pro/noarch/
+          config file : C:\Users\korij\.condarc
+    is foreign system : False
 ```
