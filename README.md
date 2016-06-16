@@ -19,6 +19,8 @@ These commands will fail:
 
 # conda info
 
+Python 2 and 3 are mixed up:
+
 ```
 > conda info
 Using Anaconda Cloud api site https://api.anaconda.org
